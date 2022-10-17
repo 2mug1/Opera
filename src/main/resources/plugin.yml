@@ -1,6 +1,6 @@
 name: Opera
 version: ${project.version}
 author: Mirus
-main: me.hypernone.opera.Opera
+main: me.hyperbone.opera.Opera
 api-version: 1.13
 

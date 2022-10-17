@@ -36,6 +36,7 @@ public class JedisManager {
         this.authenticate();
 
         this.hakobi = new Hakobi(
+                plugin,
                 yaml.getString(databasePath + "channel"),
                 jedisPool,
                 jedisPassword,
