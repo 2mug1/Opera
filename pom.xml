@@ -67,6 +67,31 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>kodaka</id>
+            <name>kodaka</name>
+            <url>https://maven.pkg.github.com/2mug1/kodaka</url>
+        </repository>
+        <repository>
+            <id>medaka</id>
+            <name>medaka</name>
+            <url>https://maven.pkg.github.com/2mug1/medaka</url>
+        </repository>
+        <repository>
+            <id>iroha</id>
+            <name>iroha</name>
+            <url>https://maven.pkg.github.com/2mug1/iroha</url>
+        </repository>
+        <repository>
+            <id>faygo</id>
+            <name>faygo</name>
+            <url>https://maven.pkg.github.com/2mug1/faygo</url>
+        </repository>
+        <repository>
+            <id>hakobi</id>
+            <name>hakobi</name>
+            <url>https://maven.pkg.github.com/2mug1/hakobi</url>
+        </repository>
     </repositories>
 
     <dependencies>
