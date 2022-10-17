@@ -1,0 +1,13 @@
+database:
+  redis:
+    address:
+    port: 6379
+    channel: "Opera"
+    auth:
+      enabled: false
+      password: ""
+
+server:
+  id: ""
+  bungee: ""  #BungeeCordに登録されているサーバー名
+  refresh_time: 2  #秒単位
