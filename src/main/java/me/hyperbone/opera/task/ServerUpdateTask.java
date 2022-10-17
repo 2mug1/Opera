@@ -1,11 +1,11 @@
 package me.hyperbone.opera.task;
 
+import me.hyperbone.hakobi.hakobi.letter.Letter;
 import me.hyperbone.opera.Opera;
 import me.hyperbone.opera.OperaConfig;
 import me.hyperbone.opera.server.Server;
 import me.hyperbone.opera.server.ServerManager;
 import me.hyperbone.opera.server.ServerStatus;
-import me.hyperbone.hakobi.hakobi.letter.Letter;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;

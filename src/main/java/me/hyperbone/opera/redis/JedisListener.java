@@ -1,12 +1,12 @@
 package me.hyperbone.opera.redis;
 
-import me.hyperbone.opera.Opera;
-import me.hyperbone.opera.OperaConfig;
-import me.hyperbone.opera.server.Server;
 import com.google.gson.JsonObject;
 import me.hyperbone.hakobi.hakobi.letter.Letter;
 import me.hyperbone.hakobi.hakobi.letter.handler.IncomingLetterHandler;
 import me.hyperbone.hakobi.hakobi.letter.listener.LetterListener;
+import me.hyperbone.opera.Opera;
+import me.hyperbone.opera.OperaConfig;
+import me.hyperbone.opera.server.Server;
 import net.iamtakagi.iroha.Style;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;

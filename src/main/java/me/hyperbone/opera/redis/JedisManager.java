@@ -1,9 +1,9 @@
 package me.hyperbone.opera.redis;
 
-import me.hyperbone.opera.OperaConfig;
 import com.google.gson.Gson;
 import lombok.Getter;
 import me.hyperbone.hakobi.hakobi.Hakobi;
+import me.hyperbone.opera.OperaConfig;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 import redis.clients.jedis.Jedis;
@@ -36,7 +36,6 @@ public class JedisManager {
         this.authenticate();
 
         this.hakobi = new Hakobi(
-                plugin,
                 yaml.getString(databasePath + "channel"),
                 jedisPool,
                 jedisPassword,

@@ -1,15 +1,15 @@
 package me.hyperbone.opera;
 
+import lombok.Getter;
+import me.hyperbone.faygo.Dependency;
+import me.hyperbone.faygo.Faygo;
+import me.hyperbone.faygo.Repository;
 import me.hyperbone.opera.command.OperaCommand;
 import me.hyperbone.opera.redis.JedisManager;
 import me.hyperbone.opera.server.ServerManager;
 import me.hyperbone.opera.task.OnlinePlayerCountTask;
 import me.hyperbone.opera.task.ServerHeartbeatTask;
 import me.hyperbone.opera.task.ServerUpdateTask;
-import lombok.Getter;
-import me.hyperbone.faygo.Dependency;
-import me.hyperbone.faygo.Faygo;
-import me.hyperbone.faygo.Repository;
 import net.iamtakagi.iroha.Style;
 import net.iamtakagi.kodaka.Kodaka;
 import net.iamtakagi.medaka.Medaka;

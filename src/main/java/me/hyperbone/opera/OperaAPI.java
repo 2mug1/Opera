@@ -1,9 +1,9 @@
 package me.hyperbone.opera;
 
-import me.hyperbone.opera.server.Server;
-import me.hyperbone.opera.server.ServerManager;
 import lombok.Getter;
 import lombok.Setter;
+import me.hyperbone.opera.server.Server;
+import me.hyperbone.opera.server.ServerManager;
 import org.bukkit.plugin.Plugin;
 
 public class OperaAPI {

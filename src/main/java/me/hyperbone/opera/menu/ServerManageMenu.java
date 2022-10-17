@@ -1,7 +1,6 @@
 package me.hyperbone.opera.menu;
 
 import me.hyperbone.opera.Opera;
-import club.axsents.opera.menu.button.*;
 import me.hyperbone.opera.menu.button.*;
 import me.hyperbone.opera.server.Server;
 import net.iamtakagi.iroha.Style;

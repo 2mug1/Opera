@@ -1,11 +1,11 @@
 package me.hyperbone.opera.command;
 
+import me.hyperbone.hakobi.hakobi.letter.Letter;
 import me.hyperbone.opera.Opera;
 import me.hyperbone.opera.OperaAPI;
 import me.hyperbone.opera.OperaConfig;
 import me.hyperbone.opera.menu.ServerInfoMenu;
 import me.hyperbone.opera.server.Server;
-import me.hyperbone.hakobi.hakobi.letter.Letter;
 import net.iamtakagi.iroha.Style;
 import net.iamtakagi.kodaka.annotation.CPL;
 import net.iamtakagi.kodaka.annotation.CommandMeta;

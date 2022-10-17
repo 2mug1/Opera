@@ -1,9 +1,9 @@
 package me.hyperbone.opera.menu.button;
 
+import me.hyperbone.hakobi.hakobi.letter.Letter;
 import me.hyperbone.opera.Opera;
 import me.hyperbone.opera.menu.ServerManageMenu;
 import me.hyperbone.opera.server.Server;
-import me.hyperbone.hakobi.hakobi.letter.Letter;
 import net.iamtakagi.iroha.ItemBuilder;
 import net.iamtakagi.iroha.Style;
 import net.iamtakagi.iroha.callback.TypeCallback;
