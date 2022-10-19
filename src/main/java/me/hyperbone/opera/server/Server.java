@@ -44,15 +44,4 @@ public class Server {
         this.serverVersion = object.get("serverVersion").getAsString();
         this.lastUpdate = System.currentTimeMillis();
     }
-
-    public void setOffline() {
-        this.serverStatus = ServerStatus.OFFLINE;
-        this.maxPlayers = 0;
-        this.onlinePlayers = 0;
-    }
-
-    public void setServerStatus(ServerStatus status) {
-        this.serverStatus = status;
-    }
-
 }

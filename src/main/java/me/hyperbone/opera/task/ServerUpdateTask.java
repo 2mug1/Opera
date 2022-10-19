@@ -29,6 +29,7 @@ public class ServerUpdateTask extends BukkitRunnable {
 
         this.runTaskTimer(plugin, 0, yaml.getLong("server.refresh_time") * 20);
     }
+
     @Override
     public void run() {
         Map<String, String> data = new HashMap<>();

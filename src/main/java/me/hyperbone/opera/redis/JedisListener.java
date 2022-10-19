@@ -93,4 +93,27 @@ public class JedisListener implements LetterListener {
                     );
         }
     }
+
+    @IncomingLetterHandler("start")
+    public void receiveStart(JsonObject data) {
+        if (!data.get("server").getAsString().equalsIgnoreCase(OperaConfig.loadYamlConfig().getString("server.id"))) {
+            Bukkit.getOnlinePlayers().stream().filter(player -> player.hasPermission("opera.log")).forEach(
+                    player -> player.sendMessage(Opera.getInstance().getPrefix() +
+                            Style.WHITE + Style.BOLD + data.get("server").getAsString() + Style.RESET + Style.AQUA + "が起動しました。")
+            );
+        }
+    }
+
+    @IncomingLetterHandler("stop")
+    public void receiveStop(JsonObject data) {
+        if (!data.get("server").getAsString().equalsIgnoreCase(OperaConfig.loadYamlConfig().getString("server.id"))) {
+            Bukkit.getOnlinePlayers().stream().filter(player -> player.hasPermission("opera.log")).forEach(
+                    player -> player.sendMessage(Opera.getInstance().getPrefix() +
+                            Style.WHITE + Style.BOLD + data.get("server").getAsString() + Style.RESET + Style.RED + "が停止しました。")
+            );
+
+            Opera.getInstance().getServerManager().getServerMap().values().remove(
+                    Opera.getInstance().getServerManager().getServerByName(data.get("server").getAsString()));
+        }
+    }
 }

@@ -4,6 +4,7 @@ import lombok.Getter;
 import me.hyperbone.faygo.Dependency;
 import me.hyperbone.faygo.Faygo;
 import me.hyperbone.faygo.Repository;
+import me.hyperbone.hakobi.hakobi.letter.Letter;
 import me.hyperbone.opera.command.OperaCommand;
 import me.hyperbone.opera.redis.JedisManager;
 import me.hyperbone.opera.server.ServerManager;
@@ -14,6 +15,9 @@ import net.iamtakagi.iroha.Style;
 import net.iamtakagi.kodaka.Kodaka;
 import net.iamtakagi.medaka.Medaka;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Opera extends JavaPlugin {
 
@@ -73,10 +77,19 @@ public class Opera extends JavaPlugin {
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         setup = false;
+
+        Map<String, String> start = new HashMap<>();
+        start.put("server", OperaConfig.loadYamlConfig().getString("server.id"));
+        Letter letter = new Letter("start", start);
+        Opera.getInstance().getJedisManager().getHakobi().sendLetter(letter);
     }
 
     @Override
     public void onDisable() {
+        Map<String, String> stop = new HashMap<>();
+        stop.put("server", OperaConfig.loadYamlConfig().getString("server.id"));
+        Letter letter = new Letter("stop", stop);
+        Opera.getInstance().getJedisManager().getHakobi().sendLetter(letter);
     }
 
     public static boolean isSetup() {
