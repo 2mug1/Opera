@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    volumes:
+      - type: bind
+        source: ./redis
+        target: /data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks:
+      - internal
+
+  waterfall:
+    container_name: waterfall
+    image: ghcr.io/2mug1/waterfall:latest
+    volumes:
+      - type: bind
+        source: ./waterfall
+        target: /app
+    tty: true
+    stdin_open: true
+    environment:
+      TZ: Asia/Tokyo
+      JAVA_OPTS: -Xms256M -Xmx512M
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - published: 25565
+        target: 25565
+        protocol: tcp
+    networks:
+      - default
+
+  paper:
+    container_name: hub
+    image: ghcr.io/2mug1/paper:latest
+    volumes:
+      - type: bind
+        source: ./paper
+        target: /app
+    tty: true
+    stdin_open: true
+    environment:
+      TZ: Asia/Tokyo
+      JAVA_OPTS: -Xms1G -Xmx2G
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - default
+      - internal
+
+networks:
+  internal:
+    internal: true

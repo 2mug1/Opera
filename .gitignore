@@ -16,3 +16,17 @@ target/
 hs_err_pid*
 
 .lib
+
+# Docker
+
+## Paper
+/docker/paper/*
+!/docker/paper/.gitkeep
+
+## Waterfall
+/docker/waterfall/*
+!/docker/waterfall/.gitkeep
+
+## Redis
+/docker/redis/*
+!/docker/redis/.gitkeep
