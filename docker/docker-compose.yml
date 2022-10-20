@@ -38,7 +38,7 @@ services:
       - default
 
   paper:
-    container_name: hub
+    container_name: paper
     image: ghcr.io/2mug1/paper:latest
     volumes:
       - type: bind
